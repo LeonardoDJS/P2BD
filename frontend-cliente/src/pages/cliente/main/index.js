@@ -32,7 +32,7 @@ export default class Main extends Component {
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
+                        <th scope="col">#</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Salário</th>
                             <th scope="col">Nascimento</th>
@@ -49,8 +49,8 @@ export default class Main extends Component {
                                 <td>{new Date(usuario.dataNascimento).toLocaleDateString('pt-BR', { year: 'numeric', month: '2-digit', day: '2-digit' })}</td>
                                 <td>{usuario.ativo ? "Sim" : "Não"}</td>
                                 <td> <Link to={`/clientes/${usuario.id}`}> <button type="button" class="btn btn-primary">Detalhes</button> </Link> </td>
-                                <td><button type="button" class="btn btn-warning">Atualizar</button></td>
-                                <td><button type="button" class="btn btn-danger">Excluir</button></td>
+                                <td> <Link to={`/editarCliente/${usuario.id}`}> <button type="button" class="btn btn-warning">Atualizar</button> </Link></td>
+                                <td> <Link to={`/deletarCliente/${usuario.id}`}> <button type="button" class="btn btn-danger">Excluir</button> </Link></td>
                             </tr>
                         ))}
                     </tbody>
