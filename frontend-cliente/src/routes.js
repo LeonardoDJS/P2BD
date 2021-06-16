@@ -1,13 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
- 
-import MainUsuario from './pages/cliente/main';
+import MainCliente from './pages/cliente/main';
+import DetalhesCliente from './pages/cliente/detalhes';
  
 const Routes = () => (
  
     <BrowserRouter>
         <Switch>
-            <Route exact path="/clientes" component={MainUsuario} />
+            <Route exact path="/clientes" component={MainCliente} />
+            <Route path="/clientes/:id" component={DetalhesCliente} />
         </Switch>
     </BrowserRouter>
 )
